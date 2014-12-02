@@ -5,3 +5,6 @@ C:\Users\Christopher\Documents\GitHub\chessv2\Chessv2\Chessv2\bin\Debug\Chessv2.
 C:\Users\Christopher\Documents\GitHub\chessv2\Chessv2\Chessv2\obj\Debug\Chessv2.csprojResolveAssemblyReference.cache
 C:\Users\Christopher\Documents\GitHub\chessv2\Chessv2\Chessv2\obj\Debug\Chessv2.exe
 C:\Users\Christopher\Documents\GitHub\chessv2\Chessv2\Chessv2\obj\Debug\Chessv2.pdb
+C:\Users\Alex\Documents\GitHub\chessv2\Chessv2\Chessv2\bin\Debug\Chessv2.exe.config
+C:\Users\Alex\Documents\GitHub\chessv2\Chessv2\Chessv2\obj\Debug\Chessv2.exe
+C:\Users\Alex\Documents\GitHub\chessv2\Chessv2\Chessv2\obj\Debug\Chessv2.pdb

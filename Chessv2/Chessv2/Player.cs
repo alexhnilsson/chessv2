@@ -55,10 +55,12 @@ namespace Chessv2
             // Sets out Black Bishop
             Bishop BlackBishop = new Bishop("B", new Position(2, 7));
             Bishop BlackBishop2 = new Bishop("B", new Position(5, 7));
+
+            //Lista
             List<IChessPiece> BlackPieces = new List<IChessPiece>();
             List<IChessPiece> WhitePieces = new List<IChessPiece>();
             
-
+            //Lägger till i vit lista
             WhitePieces.Add(WhitePawn1);
             WhitePieces.Add(WhitePawn2);
             WhitePieces.Add(WhitePawn3);
@@ -76,6 +78,7 @@ namespace Chessv2
             WhitePieces.Add(WhiteTower);
             WhitePieces.Add(WhiteTower2);
 
+            // Lägger till i svart lista
             BlackPieces.Add(BlackPawn1);
             BlackPieces.Add(BlackPawn2);
             BlackPieces.Add(BlackPawn3);

@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chessv2
 {
-    class Program
+    class ChessBoard
     {
-        
-        static void Main(string[] args)
-        {
-          
-        }
     }
 }

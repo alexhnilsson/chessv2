@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Chessv2;
 
-namespace _2d_array
+namespace Chessv2
 {
     public class King : IChessPiece
     {

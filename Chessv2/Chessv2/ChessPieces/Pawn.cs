@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using _2d_array;
 
-namespace Chessv2.ChessPieces
+
+namespace Chessv2
 {
     public class Pawn : IChessPiece
     {

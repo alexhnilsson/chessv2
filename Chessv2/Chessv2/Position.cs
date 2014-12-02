@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2d_array
+namespace Chessv2
 {
     public class Position
     {

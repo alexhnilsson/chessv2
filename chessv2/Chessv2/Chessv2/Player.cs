@@ -8,12 +8,12 @@ namespace Chessv2
     public class Player
     {
         private List<ChessPiece> pieceList;
-        public Move move;
+        public Move MakeMove;
         private string color;
         public Player(string color, List<ChessPiece> pieceList)
         {
             this.pieceList = pieceList;
-            move = new Move(pieceList, this);
+            MakeMove = new Move(pieceList, this);
             this.color = color;
         }
 
@@ -24,7 +24,7 @@ namespace Chessv2
 
         public void GetMove()
         {
-            var gamepieces = move.CanMovePieces();
+            var gamepieces = MakeMove.CanMovePieces();
             ChessPiece piece = gamepieces[new Random().Next(0, gamepieces.Count)];
             var position = piece.MovePositions[new Random().Next(0, piece.MovePositions.Count)];
             EraseEnemy(position);

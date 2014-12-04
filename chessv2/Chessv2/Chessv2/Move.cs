@@ -66,19 +66,19 @@ namespace Chessv2
                 foreach (var move in moveList)
                 {
                     var possibleMove = new Position(move.x + piece.GetPositionX, move.y + piece.GetPositionY);
-                    if (IsInsideGameboard(possibleMove) && IsOccupied(possibleMove) && IsEnemy(possibleMove, piece))
+                    if (InsideGameboard(possibleMove) && Occupied(possibleMove) && Enemy(possibleMove, piece))
                     {
                         piece.MovePositions.Add(possibleMove);
                         piece.canMove = true;
                         piece.canKill = true;
                         break;
                     }
-                    if (IsInsideGameboard(possibleMove) && !IsOccupied(possibleMove))
+                    if (InsideGameboard(possibleMove) && !Occupied(possibleMove))
                     {
                         piece.MovePositions.Add(possibleMove);
                         piece.canMove = true;
                     }
-                    if (IsInsideGameboard(possibleMove) && IsOccupied(possibleMove) && !IsEnemy(possibleMove, piece))
+                    if (InsideGameboard(possibleMove) && Occupied(possibleMove) && !Enemy(possibleMove, piece))
                     {
                         break;
                     }
@@ -94,7 +94,7 @@ namespace Chessv2
 
                     //attackmove
                     var possibleMove = new Position(move.x + piece.GetPositionX, move.y + piece.GetPositionY);
-                    if (IsInsideGameboard(possibleMove) && IsOccupied(possibleMove) && IsEnemy(possibleMove, piece) && DiagnolMove(possibleMove, piece))
+                    if (InsideGameboard(possibleMove) && Occupied(possibleMove) && Enemy(possibleMove, piece) && DiagnolMove(possibleMove, piece))
                     {
                         piece.MovePositions.Add(possibleMove);
                         piece.canMove = true;
@@ -102,13 +102,13 @@ namespace Chessv2
                         break;
                     }
                     //Go forward
-                    if (IsInsideGameboard(possibleMove) && !IsOccupied(possibleMove) && VerticalMove(possibleMove, piece))
+                    if (InsideGameboard(possibleMove) && !Occupied(possibleMove) && VerticalMove(possibleMove, piece))
                     {
                         piece.MovePositions.Add(possibleMove);
                         piece.canMove = true;
                     }
                     //obstacle in the way
-                    if (IsInsideGameboard(possibleMove) && IsOccupied(possibleMove) && VerticalMove(possibleMove, piece))
+                    if (InsideGameboard(possibleMove) && Occupied(possibleMove) && VerticalMove(possibleMove, piece))
                     {
                         break;
                     }
@@ -129,14 +129,14 @@ namespace Chessv2
 
 
 
-        private bool IsInsideGameboard(Position possibleMove)
+        private bool InsideGameboard(Position possibleMove)
         {
             return possibleMove.x >= 0 && possibleMove.x < 8 && possibleMove.y >= 0 && possibleMove.y < 8;
         }
 
 
 
-        private bool IsOccupied(Position possibleMove)
+        private bool Occupied(Position possibleMove)
         {
             foreach (var chessPiece in pieceList)
             {
@@ -150,7 +150,7 @@ namespace Chessv2
             return false;
         }
 
-        private bool IsEnemy(Position possibleMove, ChessPiece myPiece)
+        private bool Enemy(Position possibleMove, ChessPiece myPiece)
         {
             foreach (var chessPiece in pieceList)
             {

@@ -37,14 +37,14 @@ namespace Chessv2
 
         public void BlackTurn()
         {
-            BlackPlayer.move.AnalyzePieces();
+            BlackPlayer.MakeMove.AnalyzePieces();
             BlackPlayer.GetMove();
 
         }
 
         public void WhiteTurn()
         {
-            WhitePlayer.move.AnalyzePieces();
+            WhitePlayer.MakeMove.AnalyzePieces();
             WhitePlayer.GetMove();
 
         }

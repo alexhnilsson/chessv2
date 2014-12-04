@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Chessv2
 {
-    internal class Program
+    internal class Program //PROGRAM START, LADDAR MENU SEN GAME
     {
         private static void Main(string[] args)
         {

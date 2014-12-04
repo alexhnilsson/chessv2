@@ -8,13 +8,9 @@ using System.Threading.Tasks;
 namespace Chessv2
 {
     class ChessBoard
-    {
-        
-        
-        public void Print()
-           
-        {
-            
+    {                        
+        public void Print()  
+        {            
             //skapar ett shackbräde som är 8 gånger 8
             //denna skapar en vit bakgrund som är 8x8
             for (int x = 0; x < 8; x++)
@@ -48,7 +44,11 @@ namespace Chessv2
                 }
             }
 
-
         }
+
+
+
+       
+        
     }
 }

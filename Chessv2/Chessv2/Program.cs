@@ -12,7 +12,7 @@ namespace Chessv2
         static void Main(string[] args)
         {
           ChessBoard chessBoard = new ChessBoard();
-           chessBoard.Print();
+          chessBoard.Print();
         }
     }
 }

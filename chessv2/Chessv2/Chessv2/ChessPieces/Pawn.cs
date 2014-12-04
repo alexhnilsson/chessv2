@@ -28,7 +28,7 @@ namespace Chessv2
                 });
                 movePattern.Add(new List<Position>
                 {
-                    new Position(0, 2)
+                    new Position(0, 6)
                 });
                 movePattern.Add(new List<Position>
                 {

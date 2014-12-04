@@ -39,7 +39,7 @@ namespace Chessv2
                     Console.WriteLine("So, how was your day?");
                     System.Console.ReadKey(true);
 
-                    Console.WriteLine("Why don't you answer me?...");
+                    Console.WriteLine("why don't you answer me?...");
                     System.Console.ReadKey(true);
 
                     Console.WriteLine("I could be your mom");

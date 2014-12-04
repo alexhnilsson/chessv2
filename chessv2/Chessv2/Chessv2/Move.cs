@@ -18,7 +18,7 @@ namespace Chessv2
         {
             this.player = player;
             this.pieceList = pieceList;
-        }
+        }s
         public List<ChessPiece> GetMyPieces()
         {
             List<ChessPiece> Pieces = new List<ChessPiece>();

@@ -13,8 +13,8 @@ namespace Chessv2
         public List<Position> MovePositions { get; set; }
 
         protected string color;
-        public bool canKill = false;
-        public bool canMove = false;
+        public bool CanKill = false;
+        public bool CanMove = false;
         public bool IsThreatened = false;
 
         public int GetPositionX { get; set; }

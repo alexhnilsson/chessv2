@@ -18,7 +18,7 @@ namespace Chessv2
         {
             this.player = player;
             this.pieceList = pieceList;
-        }s
+        }
         public List<ChessPiece> GetMyPieces()
         {
             List<ChessPiece> Pieces = new List<ChessPiece>();
@@ -36,7 +36,7 @@ namespace Chessv2
             List<ChessPiece> Pieces = new List<ChessPiece>();
             foreach (var piece in GetMyPieces())
             {
-                if (piece.canMove)
+                if (piece.CanMove)
                 {
                     Pieces.Add(piece);
                 }
@@ -69,14 +69,14 @@ namespace Chessv2
                     if (InsideGameboard(possibleMove) && Occupied(possibleMove) && Enemy(possibleMove, piece))
                     {
                         piece.MovePositions.Add(possibleMove);
-                        piece.canMove = true;
-                        piece.canKill = true;
+                        piece.CanMove = true;
+                        piece.CanKill = true;
                         break;
                     }
                     if (InsideGameboard(possibleMove) && !Occupied(possibleMove))
                     {
                         piece.MovePositions.Add(possibleMove);
-                        piece.canMove = true;
+                        piece.CanMove = true;
                     }
                     if (InsideGameboard(possibleMove) && Occupied(possibleMove) && !Enemy(possibleMove, piece))
                     {
@@ -97,15 +97,15 @@ namespace Chessv2
                     if (InsideGameboard(possibleMove) && Occupied(possibleMove) && Enemy(possibleMove, piece) && DiagnolMove(possibleMove, piece))
                     {
                         piece.MovePositions.Add(possibleMove);
-                        piece.canMove = true;
-                        piece.canKill = true;
+                        piece.CanMove = true;
+                        piece.CanKill = true;
                         break;
                     }
                     //Go forward
                     if (InsideGameboard(possibleMove) && !Occupied(possibleMove) && VerticalMove(possibleMove, piece))
                     {
                         piece.MovePositions.Add(possibleMove);
-                        piece.canMove = true;
+                        piece.CanMove = true;
                     }
                     //obstacle in the way
                     if (InsideGameboard(possibleMove) && Occupied(possibleMove) && VerticalMove(possibleMove, piece))

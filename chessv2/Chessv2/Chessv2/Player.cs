@@ -9,17 +9,18 @@ namespace Chessv2
     {
         private List<ChessPiece> pieceList;
         public Move MakeMove;
-        private string color;
+        private string Color;
         public Player(string color, List<ChessPiece> pieceList)
         {
             this.pieceList = pieceList;
             MakeMove = new Move(pieceList, this);
-            this.color = color;
+            this.Color = color;
+            
         }
 
         public string Team()
         {
-            return color;
+            return Color;
         }
 
         public void GetMove()

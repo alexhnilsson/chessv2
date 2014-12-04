@@ -1,7 +1,8 @@
 ﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+﻿using System.Runtime.InteropServices.WindowsRuntime;
+﻿using System.Text;
 
 namespace Chessv2
 {
@@ -18,20 +19,26 @@ namespace Chessv2
             PieceList = new Pieces();
             WhitePlayer = new Player("White", PieceList.GetPieceList());
             BlackPlayer = new Player("Black", PieceList.GetPieceList());
+            
+            
 
         }
 
         public void StartGame()
         {
+            
             while (true)
             {
                 PrintBoard.Board(PieceList.GetPieceList());
                 Console.ReadKey();
                 WhiteTurn();
+                
                 PrintBoard.Board(PieceList.GetPieceList());
                 Console.ReadKey();
                 BlackTurn();
                 PrintBoard.Board(PieceList.GetPieceList());
+               
+                
             }
         }
 

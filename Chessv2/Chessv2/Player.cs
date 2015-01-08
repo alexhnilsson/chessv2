@@ -8,8 +8,9 @@ namespace Chessv2
 {
     class Player
     {
-        
-        public static void ChessPieces()
+        public List<IChessPiece> BlackPieces { get; set; }
+        public List<IChessPiece> WhitePieces { get; set; }
+        public void ChessPieces()
         {
             // Sets out Black pawns
             Pawn BlackPawn1 = new Pawn("B", new Position(0, 6));
@@ -57,8 +58,8 @@ namespace Chessv2
             Bishop BlackBishop2 = new Bishop("B", new Position(5, 7));
 
             //Lista
-            List<IChessPiece> BlackPieces = new List<IChessPiece>();
-            List<IChessPiece> WhitePieces = new List<IChessPiece>();
+             BlackPieces = new List<IChessPiece>();
+             WhitePieces = new List<IChessPiece>();
             
             //Lägger till i vit lista
             WhitePieces.Add(WhitePawn1);

@@ -8,9 +8,35 @@ using System.Threading.Tasks;
 namespace Chessv2
 {
     class ChessBoard
-    {                        
-        public void Print()  
-        {            
+    {
+        Player play = new Player();
+        public ChessBoard()
+        {
+            play.ChessPieces();
+        }
+        public IChessPiece GetChessPieceAt(int x, int y)
+        {
+            foreach (var blackpiece in play.BlackPieces)
+            {
+                if (blackpiece.position.X == x && blackpiece.position.Y == y)
+                {
+                    return blackpiece;
+                }
+            }
+            foreach (var whitepiece in play.WhitePieces)
+            {
+                if (whitepiece.position.X == x && whitepiece.position.Y == y)
+                {
+                    return whitepiece;
+                }
+            }
+            return null;
+        }
+        public void Print()
+        {
+            //play.BlackPieces;
+            //play.WhitePieces;
+
             //skapar ett shackbräde som är 8 gånger 8
             //denna skapar en vit bakgrund som är 8x8
             for (int x = 0; x < 8; x++)
@@ -48,7 +74,7 @@ namespace Chessv2
 
 
 
-       
-        
+
+
     }
 }

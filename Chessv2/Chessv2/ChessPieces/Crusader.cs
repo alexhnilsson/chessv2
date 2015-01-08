@@ -10,7 +10,7 @@ namespace Chessv2
     public class Crusader : IChessPiece
     {
 
-        public Position position;
+        public Position position { get; set; }
 
         public Crusader(string color, Position pos)
         {

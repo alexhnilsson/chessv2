@@ -10,7 +10,7 @@ namespace Chessv2
     public class King : IChessPiece
     {
 
-        public Position position;
+        public Position position { get; set; }
 
         public King(string color, Position pos)
         {

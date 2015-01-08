@@ -9,6 +9,7 @@ namespace Chessv2
 {
     public interface IChessPiece
     {
+        Position position { get; set; }
         string Name();
         string Color { get; set; }
         void Move();

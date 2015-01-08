@@ -9,7 +9,7 @@ namespace Chessv2
 {
     public class Pawn : IChessPiece
     {
-        public Position position;
+        public Position position { get; set; }
         public Pawn(string color, Position pos)
         {
             this.Color = color;

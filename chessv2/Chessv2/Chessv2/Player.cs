@@ -14,15 +14,12 @@ namespace Chessv2
         {
             this.pieceList = pieceList;
             MakeMove = new Move(pieceList, this);
-            this.Color = color;
-            
+            this.Color = color;  
         }
-
         public string Team()
         {
             return Color;
         }
-
         public void GetMove()
         {
             var gamepieces = MakeMove.CanMovePieces();
@@ -32,7 +29,6 @@ namespace Chessv2
             piece.GetPositionX = position.x;
             piece.GetPositionY = position.y;
         }
-
         public void EraseEnemy(Position mypos)
         {
             ChessPiece piece = null;
@@ -42,13 +38,11 @@ namespace Chessv2
                 {
                     piece = chessPiece;
                 }
-
             }
             if (piece != null)
             {
                 pieceList.Remove(piece);
             }
-
         }
     }
 }

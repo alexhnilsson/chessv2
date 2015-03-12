@@ -8,10 +8,8 @@ namespace Chessv2
     public class Pieces
     {
         private List<ChessPiece> pieceList = null;
-
         public Pieces()
         {
-
             pieceList = new List<ChessPiece>
             {
                 //Vita Pjäser
@@ -31,7 +29,6 @@ namespace Chessv2
               //  new Rook(7, 0, "Black"),
               //  new Queen(4, 0, "Black"),
              //   new King(3, 0, "Black"),         
-
                 ////Svarta Pjäser
                 new Pawn(0, 6, "White"),
                 new Pawn(1, 6, "White"),
@@ -50,14 +47,11 @@ namespace Chessv2
              //   new Queen(3, 7, "White"),
             //    new King(4, 7, "White")
             };
-
         }
-
         public List<ChessPiece> GetPieceList() // Metod som kallas när man vill ha ut listan
         {
             return pieceList;
         }
-
         public void setPieceList(List<ChessPiece> pl) // metod som kallas när listan ska uppdateras
         {
             pieceList = pl;

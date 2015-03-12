@@ -9,9 +9,7 @@ namespace Chessv2
 {
     public class Crusader : IChessPiece
     {
-
         public Position position;
-
         public Crusader(string color, Position pos)
         {
             this.Color = color;
@@ -39,7 +37,6 @@ namespace Chessv2
         {
             //int startX = Position.X;
             //int startY = Position.Y;
-
             //Console.SetCursorPosition(startX, startY);
         }
     }

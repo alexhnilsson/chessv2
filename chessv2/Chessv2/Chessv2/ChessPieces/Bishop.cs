@@ -37,7 +37,6 @@ namespace Chessv2
         {
             //int startX = Position.X;
             //int startY = Position.Y;
-
             //Console.SetCursorPosition(startX, startY);
         }
     }

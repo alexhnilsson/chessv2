@@ -43,7 +43,6 @@ namespace Chessv2
             }
             return Pieces;
         }
-
         public void AnalyzePieces()
         {
             foreach (var chessPiece in pieceList)
@@ -58,7 +57,6 @@ namespace Chessv2
                 }
             }
         }
-
         private void AnalyzeMoves(ChessPiece piece)
         {
             foreach (var moveList in piece.movePattern)
@@ -91,7 +89,6 @@ namespace Chessv2
             {
                 foreach (var move in moveList)
                 {
-
                     //attackmove
                     var possibleMove = new Position(move.x + piece.GetPositionX, move.y + piece.GetPositionY);
                     if (InsideGameboard(possibleMove) && Occupied(possibleMove) && Enemy(possibleMove, piece) && DiagnolMove(possibleMove, piece))
@@ -112,11 +109,9 @@ namespace Chessv2
                     {
                         break;
                     }
-
                 }
             }
         }
-
         public bool VerticalMove(Position possibleMove, ChessPiece piece)
         {
             return possibleMove.x == piece.GetPositionX && possibleMove.y != piece.GetPositionY;
@@ -126,16 +121,10 @@ namespace Chessv2
         {
             return possibleMove.x != piece.GetPositionX && possibleMove.y != piece.GetPositionY;
         }
-
-
-
         private bool InsideGameboard(Position possibleMove)
         {
             return possibleMove.x >= 0 && possibleMove.x < 8 && possibleMove.y >= 0 && possibleMove.y < 8;
         }
-
-
-
         private bool Occupied(Position possibleMove)
         {
             foreach (var chessPiece in pieceList)
@@ -144,26 +133,21 @@ namespace Chessv2
                 {
                     return true;
                 }
-
             }
 
             return false;
         }
-
         private bool Enemy(Position possibleMove, ChessPiece myPiece)
         {
             foreach (var chessPiece in pieceList)
             {
                 if (chessPiece.GetPositionX == possibleMove.x && chessPiece.GetPositionY == possibleMove.y && chessPiece.GetColor() != myPiece.GetColor())
                 {
-
                     return true;
                 }
 
             }
-
             return false;
         }
-
     }
 }

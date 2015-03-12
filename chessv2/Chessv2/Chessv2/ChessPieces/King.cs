@@ -9,23 +9,18 @@ namespace Chessv2
 {
     public class King : IChessPiece
     {
-
         public Position position;
 
         public King(string color, Position pos)
         {
-
             this.Color = color;
             position = pos;
         }
-
         public string Name()
         {
             string name = "K";
             return Color + name;
         }
-
-
         public string Color
         {
             get;
@@ -43,7 +38,6 @@ namespace Chessv2
         {
             //int startX = Position.X;
             //int startY = Position.Y;
-
             //Console.SetCursorPosition(startX, startY);
         }
     }

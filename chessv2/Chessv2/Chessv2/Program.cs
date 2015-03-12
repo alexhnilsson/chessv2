@@ -11,10 +11,8 @@ namespace Chessv2
     {
         private static void Main(string[] args)
         {
-
             Menu menu = new Menu();// SKRIVER UT MENYN
             menu.MenuStart(); // STARTAR MENYN
-
             Game gametime = new Game(); // SKAPAR NYTT GAME
             gametime.StartGame(); // STARTAR NYTT GAME
         }

@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace Chessv2
 {
-
-
-
     // DETTA CHESS FUNGERAR,
     public class PrintBoard // SKRIVER UT OCH HANTERAR CHESSBOARD
     {
@@ -16,9 +13,8 @@ namespace Chessv2
         {
             Console.Clear();
             Console.WriteLine("   AlphaChess v.1.33.7 | Copyright 2014 c The Game Geeks at EC \r\n" + // TOPPEN
-                              "   -------------------------------------------------------------");
+                             "   -------------------------------------------------------------");
             var TheBoard = FillBoard(piece);
-
             for (var y = 0; y < 8; y++) // SKAPAR EN FOR-LOOP SOM SKRIVER UT "HÖJDEN" Skriver ut en slot på höjden varje gång
             {
                 Console.Write("    ");
@@ -32,9 +28,7 @@ namespace Chessv2
                         Console.Write("  "); // ^
                     }
                     Console.Write(TheBoard[x, y] + "]" ); 
-
                 }
-                
                 Console.WriteLine();
             }
             Console.Beep(200, 100);
@@ -42,9 +36,7 @@ namespace Chessv2
             int Turn = 0;
             Console.WriteLine("   Turn: " + Turn);
             Console.WriteLine("   Player: ");
-
         }
-
         public string[,] FillBoard(List<ChessPiece> popPieces) // fyller boarden med pjäser
         {
             var Board = new string[8, 8]; // Säger att en board ska skapas som är 8x8

@@ -29,7 +29,6 @@ namespace Chessv2
         {
             //DoStuff
         }
-
         public override string ToString()
         {
             return Name();
@@ -38,7 +37,6 @@ namespace Chessv2
         {
             //int startX = Position.X;
             //int startY = Position.Y;
-
             //Console.SetCursorPosition(startX, startY);
         }
     }

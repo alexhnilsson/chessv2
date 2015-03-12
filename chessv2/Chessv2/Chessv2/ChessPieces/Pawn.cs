@@ -12,11 +12,8 @@ namespace Chessv2
 {
     class Pawn : ChessPiece
     {
-
-
         public Pawn(int x, int y, string color)
-        {
-            
+        {          
             GetPositionX = x;
             GetPositionY = y;
             this.color = color;
@@ -58,7 +55,6 @@ namespace Chessv2
                     new Position(1, -1)
                 });
             }
-
         }
         public override string Describe()
         {
@@ -72,7 +68,6 @@ namespace Chessv2
                 return "I am a Black Pawn, at postion "
                   + GetPositionX + ", " + GetPositionY;
             }
-
         }
         public override string GetChessType()// kallar på denna när man vill ha ut typen
         {

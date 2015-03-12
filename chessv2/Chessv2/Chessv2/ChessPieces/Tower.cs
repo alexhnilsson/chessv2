@@ -15,7 +15,6 @@ namespace Chessv2
             this.Color = color;
             position = pos;
         }
-
         public string Name()
         {
             string name = "T";
@@ -38,7 +37,6 @@ namespace Chessv2
         {
             //int startX = Position.X;
             //int startY = Position.Y;
-
             //Console.SetCursorPosition(startX, startY);
         }
     }

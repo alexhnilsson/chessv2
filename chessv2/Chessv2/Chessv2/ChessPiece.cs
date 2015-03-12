@@ -8,19 +8,14 @@ namespace Chessv2
 {
     public class ChessPiece
     {
-
         public List<List<Position>> movePattern { get; set; }
         public List<Position> MovePositions { get; set; }
-
         protected string color;
         public bool CanKill = false;
         public bool CanMove = false;
         public bool IsThreatened = false;
-
         public int GetPositionX { get; set; }
         public int GetPositionY { get; set; }
-
-
         public ChessPiece()
         {
             MovePositions = new List<Position>();
